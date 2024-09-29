@@ -3,19 +3,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const FormDataModel = require ('./models/FormData');
 
-require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
+mongoose.connect('mongodb+srv://sananbsd2018:K73uVZjkwCn0taM4@cluster0.mkxogeo.mongodb.net/yeekee555');
 
 app.post('/register', (req, res)=>{
     // To post / insert data into database
@@ -56,7 +49,7 @@ app.post('/login', (req, res)=>{
     })
 })
 
-app.listen(80, () => {
-    console.log("Server listining on http://127.0.0.1:80");
+app.listen(3001, () => {
+    console.log("Server listining on http://127.0.0.1:3001");
 
 });
