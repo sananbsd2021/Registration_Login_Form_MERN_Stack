@@ -13,7 +13,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'http://registration-login-form-mern-stack1.vercel.app/register', {name, email, password})
+        axios.post( 'https://registration-login-form-mern-stack1.vercel.app/register', {name, email, password})
         .then(result => {
             console.log(result);
             if(result.data === "Already registered"){
