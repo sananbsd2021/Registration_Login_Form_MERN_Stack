@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'https://registration-login-form-mern-stack1.vercel.app/login', {email, password})
+        axios.post( 'https://0698-49-228-176-217.ngrok-free.app/api/auth/login', {email, password})
         .then(result => {
             console.log(result);
             if(result.data === "Success"){
