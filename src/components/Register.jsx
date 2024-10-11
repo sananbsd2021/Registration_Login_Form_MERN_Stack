@@ -13,7 +13,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'https://7c08-49-228-176-217.ngrok-free.app/register', {name, email, password})
+        axios.post( 'https://a40d-2405-9800-ba33-90e6-00-1.ngrok-free.app/register', {name, email, password})
         .then(result => {
             console.log(result);
             if(result.data === "Already registered"){
