@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'https://a40d-2405-9800-ba33-90e6-00-1.ngrok-free.app/login', {email, password})
+        axios.post( 'https://e96e-2405-9800-ba33-90e6-00-5.ngrok-free.app/api/auth/login', {email, password})
         .then(result => {
             console.log(result);
             if(result.data === "Success"){
